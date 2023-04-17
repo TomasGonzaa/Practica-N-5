@@ -2,17 +2,12 @@ package practicacarrito;
 
 import java.util.Scanner;
 
-public class CarritodeCompras {
+public class CarritodeCompras {	
 	
-	
-	
-
 
 	public static void main(String[] args) {
 		
-		
-		
-		
+	
 		Scanner teclado = new Scanner(System.in);
 		System.out.println("Ingrese que producto desea agregar al Carrito:");
 		System.out.println("______________________________________________");
@@ -71,6 +66,28 @@ public class CarritodeCompras {
 		
 		//TOTAL PRECIO   ITEM 1+2+3
 		
+		System.out.println("_______________________________________________");
+		System.out.println("CARRITO DE COMPRAS - TIENDA VIRTUAL");
+		System.out.println("_______________________________________________");
+		System.out.println("Producto: " + item.NombreProducto);
+		System.out.println("Precio Unitario: $" + item.PrecioProducto);
+		System.out.println("Cantidad: " + item.CantidadProducto + " Unid.");
+		System.out.println("Precio: $" + item.PrecioItemsCarrito);
+		System.out.println("_______________________________________________");
+		
+		System.out.println("Producto: " + item2.NombreProducto);
+		System.out.println("Precio Unitario: $" + item2.PrecioProducto);
+		System.out.println("Cantidad: " + item2.CantidadProducto + " Unid.");
+		System.out.println("Precio: $" + item2.PrecioItemsCarrito);
+		System.out.println("_______________________________________________");
+		
+		System.out.println("Producto: " + item3.NombreProducto);
+		System.out.println("Precio Unitario: $" + item3.PrecioProducto);
+		System.out.println("Cantidad: " + item3.CantidadProducto + " Unid.");
+		System.out.println("Precio: $" + item3.PrecioItemsCarrito);
+		System.out.println("_______________________________________________");
+		
+		
 		if(item.PrecioItemsCarrito + item2.PrecioItemsCarrito + item3.PrecioItemsCarrito > 1000) {
 			Descuento DescuentoCompra = new Descuento(
 					item.NombreProducto,
@@ -84,55 +101,17 @@ public class CarritodeCompras {
 			);
 			
 			double total = DescuentoCompra.Descontado;
-			System.out.println("_______________________________________________");
-			System.out.println("CARRITO DE COMPRAS - TIENDA VIRTUAL");
-			System.out.println("_______________________________________________");
-			System.out.println("Producto: " + item.NombreProducto);
-			System.out.println("Precio Unitario: $" + item.PrecioProducto);
-			System.out.println("Cantidad: " + item.CantidadProducto);
-			System.out.println("Precio: $" + item.PrecioItemsCarrito);
-			System.out.println("_______________________________________________");
 			
-			System.out.println("Producto: " + item2.NombreProducto);
-			System.out.println("Precio Unitario: $" + item2.PrecioProducto);
-			System.out.println("Cantidad: " + item2.CantidadProducto);
-			System.out.println("Precio: $" + item2.PrecioItemsCarrito);
-			System.out.println("_______________________________________________");
-			
-			System.out.println("Producto: " + item3.NombreProducto);
-			System.out.println("Precio Unitario: $" + item3.PrecioProducto);
-			System.out.println("Cantidad: " + item3.CantidadProducto);
-			System.out.println("Precio: $" + item3.PrecioItemsCarrito);
-			System.out.println("_______________________________________________");
 			
 			System.out.println("Precio Carrito: $" + (item.PrecioItemsCarrito + item2.PrecioItemsCarrito + item3.PrecioItemsCarrito));
 			System.out.println("Descuento Aplicado del 10%: $" + (item.PrecioItemsCarrito + item2.PrecioItemsCarrito + item3.PrecioItemsCarrito)*0.10);
 			System.out.println("_______________________________________________");
-			System.out.println("         Total a Pagar con Descuento: " + total);
+			System.out.println("         Total a Pagar con Descuento: $" + total);
 						
 		}
 		
 			else {
-				System.out.println("_______________________________________________");
-				System.out.println("CARRITO DE COMPRAS - TIENDA VIRTUAL");
-				System.out.println("_______________________________________________");
-				System.out.println("Producto: " + item.NombreProducto);
-				System.out.println("Precio Unitario: $" + item.PrecioProducto);
-				System.out.println("Cantidad: " + item.CantidadProducto);
-				System.out.println("Precio: $" + item.PrecioItemsCarrito);
-				System.out.println("_______________________________________________");
 				
-				System.out.println("Producto: " + item2.NombreProducto);
-				System.out.println("Precio Unitario: $" + item2.PrecioProducto);
-				System.out.println("Cantidad: " + item2.CantidadProducto);
-				System.out.println("Precio: $" + item2.PrecioItemsCarrito);
-				System.out.println("_______________________________________________");
-				
-				System.out.println("Producto: " + item3.NombreProducto);
-				System.out.println("Precio Unitario: $" + item3.PrecioProducto);
-				System.out.println("Cantidad: " + item3.CantidadProducto);
-				System.out.println("Precio: $" + item3.PrecioItemsCarrito);
-				System.out.println("_______________________________________________");
 				
 				System.out.println("Precio Carrito: $" + (item.PrecioItemsCarrito + item2.PrecioItemsCarrito + item3.PrecioItemsCarrito));
 				System.out.println("No se encontraron Descuentos para Aplicar.");
